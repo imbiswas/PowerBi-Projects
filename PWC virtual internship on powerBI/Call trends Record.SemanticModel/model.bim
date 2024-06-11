@@ -1,0 +1,895 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"call center data table\",\"0-measures\",\"0-measure\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.129.1229.0 (24.05)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Entities": {
+              "table0measure.call_abandoned": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "call abandoned"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Abandoned": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table0measure.call_answered": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "call_answered"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Calls Answered": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "Answered": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "Call Answered": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table0measure.call_resolved": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "call_resolved"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Calls Resolved": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "Resolved": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table0measure.callanswerrate": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "CallAnswerRate"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Answer Rate": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table0measure.total_calls": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "Total_Calls"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Calls": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  },
+                  {
+                    "Total Calls": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "0-measures",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "expression": [
+          "let",
+          "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+          "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+          "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+          "in",
+          "    #\"Removed Columns\""
+        ],
+        "kind": "m",
+        "lineageTag": "747c3993-c3fb-4f7f-96ad-95c9ea83d72f"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "647646f0-9272-49d6-8938-dbadf06089f1",
+        "fromColumn": "Date",
+        "fromTable": "call center data table",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_a22bde1b-a5a2-4d2d-9103-8cfeadc50575"
+      }
+    ],
+    "sourceQueryCulture": "en-SE",
+    "tables": [
+      {
+        "name": "call center data table",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Call Id",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "de088966-4efa-4bbf-a52a-be922f3ab1fe",
+            "sourceColumn": "Call Id",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Agent",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "70505ff7-3ef1-4913-9a92-c83a6c5dfd15",
+            "sourceColumn": "Agent",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "df923e55-ee3b-4408-bed5-fee0ad7cae11",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_a22bde1b-a5a2-4d2d-9103-8cfeadc50575"
+                },
+                "isDefault": true,
+                "relationship": "647646f0-9272-49d6-8938-dbadf06089f1"
+              }
+            ]
+          },
+          {
+            "name": "Time",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Time"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Time",
+            "lineageTag": "3bb1f415-8df5-4448-83d0-3b7973201800",
+            "sourceColumn": "Time",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Topic",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "55f6f49e-475e-4b27-b55b-95cb63ebb7ff",
+            "sourceColumn": "Topic",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Answered (Y/N)",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c163b346-01ea-47a0-8cf8-dbbd518a611e",
+            "sourceColumn": "Answered (Y/N)",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Resolved",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "db63ae53-06b1-4486-9d37-7a189d907489",
+            "sourceColumn": "Resolved",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Speed of answer in seconds",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "a1185992-6490-40b0-8a87-4b20c5d4b48f",
+            "sourceColumn": "Speed of answer in seconds",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Satisfaction rating",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "64c78200-bb12-44aa-a9f8-e20e9835b80f",
+            "sourceColumn": "Satisfaction rating",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "AvgTalkDuration.2",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "3fddadc1-3bd6-43f2-8e2b-d5ec6994b745",
+            "sourceColumn": "AvgTalkDuration.2",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "634cba71-ff03-4a3a-a130-6ec5a3d53c84",
+        "partitions": [
+          {
+            "name": "call center data table",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"E:\\Study\\Virtual Internship\\PWC\\Dataset\\01 Call-Center-Dataset.xlsx\"), null, true),",
+                "    Sheet1_Sheet = Source{[Item=\"Sheet1\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),",
+                "    #\"Split Column by Delimiter\" = Table.SplitColumn(Table.TransformColumnTypes(#\"Promoted Headers\", {{\"AvgTalkDuration\", type text}}, \"en-SE\"), \"AvgTalkDuration\", Splitter.SplitTextByDelimiter(\" \", QuoteStyle.Csv), {\"AvgTalkDuration.1\", \"AvgTalkDuration.2\"}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Split Column by Delimiter\",{\"AvgTalkDuration.1\"}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Removed Columns\",{{\"AvgTalkDuration.2\", type duration}, {\"Date\", type date}, {\"Time\", type time}, {\"Speed of answer in seconds\", Int64.Type}})",
+                "in",
+                "    #\"Changed Type1\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_ac33ae2c-6748-4465-a7db-70cc598b51f5",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "c4aec3a6-6232-4fa1-a6c4-1e237eaefc25",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "a2ef86af-0bc1-42aa-91b9-ceed1fd24460",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "5953f9b2-e28b-4d44-b02f-337050237f7b",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "764408a5-e027-4408-a21e-f04c13bc5e86",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "4be50ac8-b228-4ddc-a54c-f7260a73d317",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "56d78a4d-44d3-4ba9-b42f-d934a96fd0e6",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "fdbf13b6-9832-4806-86a9-65752e3a85c6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "32538908-838c-4ebc-ae6a-837fa7730c2b",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "897a7ff7-2088-4eb2-bd04-5441b99d4bc3",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "1674bae3-0612-4dbe-aa91-dabfbd1c3f72",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "4b420e60-12a6-48d4-8359-bf31c22d0d8a",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "04839273-4a71-4ed3-86e0-31cb465c002d"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "591bcc38-b2b3-4188-849b-df4ef75330d9",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_ac33ae2c-6748-4465-a7db-70cc598b51f5",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_a22bde1b-a5a2-4d2d-9103-8cfeadc50575",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "958dfea9-c005-40fe-8333-5b92d2bd8fe6",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "b7429e51-d4d5-4e43-84ae-00b4e1cd71e4",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "d9635247-fb1e-4d7e-83d6-62f8e7653a52",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "7caa8747-ce8b-4e15-8445-44bd40608a27",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "1889ef61-6185-4a9e-8728-b19276ff4cb4",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "b8593063-9fe3-4677-b4e2-19313e867335",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "79f3f010-74c8-4e68-9fe4-a4964407e2db",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "852bb153-a80c-4125-b3e6-d34b10c3619c",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "f03ab427-1ded-42df-9c8a-e3f89a60b3a7",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "6ca64f60-322d-418d-af37-4f9043dffb0f",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "bc521f45-618a-4c94-a615-79bdd3a52f74",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "9fdd7827-3fd4-4caa-af49-8f44240b15a7"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "e3a0cc69-c49f-4221-8d0b-29d5fd9c14d1",
+        "partitions": [
+          {
+            "name": "LocalDateTable_a22bde1b-a5a2-4d2d-9103-8cfeadc50575",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('call center data table'[Date])), 1, 1), Date(Year(MAX('call center data table'[Date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "0-measure",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "changedProperties": [
+          {
+            "property": "Name"
+          }
+        ],
+        "lineageTag": "67085442-34e4-42e7-a811-03c826ed9d89",
+        "measures": [
+          {
+            "name": "Total_Calls",
+            "expression": "COUNTROWS('call center data table')",
+            "formatString": "0",
+            "lineageTag": "13680792-b1ce-4cd0-b4be-f22f83609b40"
+          },
+          {
+            "name": "call_answered",
+            "expression": "CALCULATE([Total_Calls],'call center data table'[Answered (Y/N)] = \"Y\")",
+            "formatString": "0",
+            "lineageTag": "3cdac786-c7cb-4608-82c3-8ed08c11ad33"
+          },
+          {
+            "name": "call abandoned",
+            "expression": "[Total_Calls]-[call_answered]",
+            "formatString": "0",
+            "lineageTag": "3422be71-9b5e-4bb2-8c78-53a214a7aecb"
+          },
+          {
+            "name": "call_resolved",
+            "expression": "CALCULATE([Total_Calls],'call center data table'[Resolved] = \"Y\")",
+            "formatString": "0",
+            "lineageTag": "fda04e5f-9582-4809-b4f6-e73a7e407b5d"
+          },
+          {
+            "name": "CallAnswerRate",
+            "expression": "[call_answered]/ [Total_Calls]",
+            "formatString": "0.00\\ %;-0.00\\ %;0.00\\ %",
+            "lineageTag": "ea6c6bd3-4c23-4cc1-ab07-dadb3c685034"
+          },
+          {
+            "name": "CallResolvedRate",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "[call_resolved]/ [Total_Calls]",
+            "lineageTag": "5ac8ebad-34ff-43db-83a2-96c4084257d5"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "0-measure",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

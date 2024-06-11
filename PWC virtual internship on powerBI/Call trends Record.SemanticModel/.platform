@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Call trends Record"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2dbcda11-d46b-4aed-ace3-1b300629e1d6"
+  }
+}

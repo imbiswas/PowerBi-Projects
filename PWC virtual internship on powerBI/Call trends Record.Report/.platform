@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Call trends Record"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "825f8077-fbd7-41d2-b80a-c4af95defabb"
+  }
+}
