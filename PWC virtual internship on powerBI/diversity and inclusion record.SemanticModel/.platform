@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "diversity and inclusion record"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "d2f88ff6-172d-43fb-ae2d-68c1dd321f87"
+  }
+}

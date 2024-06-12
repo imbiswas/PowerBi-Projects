@@ -1,0 +1,1282 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Pharma Group AG\",\"0-measure\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "1"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.129.1229.0 (24.05)"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Entities": {
+              "pharma_group_ag.department_01_07_2020": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pharma Group AG",
+                    "ConceptualProperty": "Department @01.07.2020"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Department": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "pharma_group_ag.job_level_group_pra_status": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pharma Group AG",
+                    "ConceptualProperty": "Job Level group PRA status"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "PRA status (Job)": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "pharma_group_ag.nationality_1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pharma Group AG",
+                    "ConceptualProperty": "Nationality 1"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Nationality": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "pharma_group_ag.region_group_nationality_1": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "Pharma Group AG",
+                    "ConceptualProperty": "Region group: nationality 1"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Region": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table0measure.employee_promoted": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "Employee Promoted"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Promoted": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table0measure.female_promoted": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "Female Promoted"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Female": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table0measure.female_rating": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "Female Rating"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "FemaleRating(Avg)": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table0measure.male_promoted": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "Male Promoted"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Male": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table0measure.male_rating": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "Male Rating"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Male Rating (Avg)": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              },
+              "table0measure.total_employee": {
+                "Definition": {
+                  "Binding": {
+                    "ConceptualEntity": "0-measure",
+                    "ConceptualProperty": "total_Employee"
+                  }
+                },
+                "State": "Generated",
+                "Terms": [
+                  {
+                    "Employees": {
+                      "Source": {
+                        "Agent": "PowerBI.VisualColumnRename",
+                        "Type": "External"
+                      },
+                      "State": "Suggested",
+                      "Weight": 0.9
+                    }
+                  }
+                ]
+              }
+            },
+            "Language": "en-US",
+            "Version": "2.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "e439a98f-e2e2-4da0-9a94-9fc572b03c1e",
+        "fromColumn": "Last hire date",
+        "fromTable": "Pharma Group AG",
+        "joinOnDateBehavior": "datePartOnly",
+        "toColumn": "Date",
+        "toTable": "LocalDateTable_e62af81a-a85d-45b4-a741-56920dd5430a"
+      }
+    ],
+    "sourceQueryCulture": "en-SE",
+    "tables": [
+      {
+        "name": "Pharma Group AG",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Gender",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "63383ba9-75e2-4783-afa4-e4dad6a7205c",
+            "sourceColumn": "Gender",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Job Level after FY20 promotions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "97d559a1-759a-4a56-823b-937c4901d3a8",
+            "sourceColumn": "Job Level after FY20 promotions",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "New hire FY20?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f01ee3d6-fe5d-4639-82eb-56ed372e9b1a",
+            "sourceColumn": "New hire FY20?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FY20 Performance Rating",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "ee1b24e6-e293-4a29-97d5-90116a6ccdd4",
+            "sourceColumn": "FY20 Performance Rating",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Promotion in FY21?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f0b43aa7-6012-4677-bd0c-4392add63103",
+            "sourceColumn": "Promotion in FY21?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "In base group for Promotion FY21",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "aaa852ed-66e6-4936-9271-36ec47853409",
+            "sourceColumn": "In base group for Promotion FY21",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Target hire balance",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "dataType": "double",
+            "lineageTag": "15a82a04-7423-486a-9e79-e1f40f16b8ee",
+            "sourceColumn": "Target hire balance",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "FY20 leaver?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c33a9c4b-9db6-418f-91f4-9eb8c581fe7c",
+            "sourceColumn": "FY20 leaver?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Turnover",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ae85c611-5e0d-480f-9598-750a5ced5557",
+            "sourceColumn": "Turnover",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Department @01.07.2020",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "58f727e6-b856-48c6-8fc1-73a1b2d21559",
+            "sourceColumn": "Department @01.07.2020",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Job Level after FY21 promotions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "4d385693-5580-402d-8428-f756741fc704",
+            "sourceColumn": "Job Level after FY21 promotions",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Last Department in FY20",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "73da0f57-0aa8-4556-997c-8573604613a3",
+            "sourceColumn": "Last Department in FY20",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FTE group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "1162bda8-07ec-434b-b211-c95d8e5814fb",
+            "sourceColumn": "FTE group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Time type",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "3c0b3a9e-8104-4855-9bf2-67367856c71a",
+            "sourceColumn": "Time type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Department & JL group PRA status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "ace440be-c1c0-40d2-aeeb-eb036a3778c2",
+            "sourceColumn": "Department & JL group PRA status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Department & JL group for PRA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f8cffbe9-ab47-4a68-82d9-3270f151e324",
+            "sourceColumn": "Department & JL group for PRA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Job Level group PRA status",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d316e890-0563-4618-887b-2fde2b728750",
+            "sourceColumn": "Job Level group PRA status",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Job Level group for PRA",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "73541b8c-9fc9-4f69-abb6-e82fc1a91d50",
+            "sourceColumn": "Job Level group for PRA",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Time in Job Level @01.07.2020",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "eba4e18a-ec36-4b3d-9e49-a4010eebf3ca",
+            "sourceColumn": "Time in Job Level @01.07.2020",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Job Level before FY20 promotions",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "61605151-af01-4e0b-90c8-59328a3b62ac",
+            "sourceColumn": "Job Level before FY20 promotions",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Promotion in FY20?",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "cc8e8613-1945-4663-9493-313799f3e86b",
+            "sourceColumn": "Promotion in FY20?",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FY19 Performance Rating",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "93fc0a23-a991-49c4-8617-13da7d0d6100",
+            "sourceColumn": "FY19 Performance Rating",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Age group",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d920c75b-6d5c-42cc-8fae-f0f769152c32",
+            "sourceColumn": "Age group",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Age @01.07.2020",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "87b3c6bc-7858-45ef-9de7-a797aa81a914",
+            "sourceColumn": "Age @01.07.2020",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "Nationality 1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "d5cb9cec-e685-438a-9d8b-e8acf009e95d",
+            "sourceColumn": "Nationality 1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Region group: nationality 1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bd310d6c-6b7d-4704-a70e-bd3b910dfe0b",
+            "sourceColumn": "Region group: nationality 1",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Last hire date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "Long Date",
+            "lineageTag": "4fc98b8d-ce7f-4dd6-8743-977c663cd70e",
+            "sourceColumn": "Last hire date",
+            "summarizeBy": "none",
+            "variations": [
+              {
+                "name": "Variation",
+                "defaultHierarchy": {
+                  "hierarchy": "Date Hierarchy",
+                  "table": "LocalDateTable_e62af81a-a85d-45b4-a741-56920dd5430a"
+                },
+                "isDefault": true,
+                "relationship": "e439a98f-e2e2-4da0-9a94-9fc572b03c1e"
+              }
+            ]
+          },
+          {
+            "name": "Years since last hire",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "88f0a401-8a01-4a9b-a97c-a29d5028d583",
+            "sourceColumn": "Years since last hire",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "890a2a37-0061-4ba5-a05f-2d6277dd76bc",
+        "partitions": [
+          {
+            "name": "Pharma Group AG",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Excel.Workbook(File.Contents(\"E:\\Study\\Virtual Internship\\PWC\\Dataset\\03 Diversity-Inclusion-Dataset.xlsx\"), null, true),",
+                "    #\"Pharma Group AG_Sheet\" = Source{[Item=\"Pharma Group AG\",Kind=\"Sheet\"]}[Data],",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(#\"Pharma Group AG_Sheet\", [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"Employee ID\", type text}, {\"Gender\", type text}, {\"Job Level after FY20 promotions\", type text}, {\"New hire FY20?\", type text}, {\"FY20 Performance Rating\", Int64.Type}, {\"Promotion in FY21?\", type text}, {\"In base group for Promotion FY21\", type text}, {\"Target hire balance\", type number}, {\"FY20 leaver?\", type text}, {\"In base group for turnover FY20\", type text}, {\"Department @01.07.2020\", type text}, {\"Leaver FY\", type text}, {\"Job Level after FY21 promotions\", type text}, {\"Last Department in FY20\", type text}, {\"FTE group\", type any}, {\"Time type\", type text}, {\"Department & JL group PRA status\", type text}, {\"Department & JL group for PRA\", type text}, {\"Job Level group PRA status\", type text}, {\"Job Level group for PRA\", type text}, {\"Time in Job Level @01.07.2020\", Int64.Type}, {\"Job Level before FY20 promotions\", type text}, {\"Promotion in FY20?\", type text}, {\"FY19 Performance Rating\", Int64.Type}, {\"Age group\", type text}, {\"Age @01.07.2020\", Int64.Type}, {\"Nationality 1\", type text}, {\"Region group: nationality 1\", type text}, {\"Broad region group: nationality 1\", type text}, {\"Last hire date\", type date}, {\"Years since last hire\", Int64.Type}, {\"Rand\", type number}}),",
+                "    #\"Filtered Rows\" = Table.SelectRows(#\"Changed Type\", each true),",
+                "    #\"Split Column by Delimiter\" = Table.SplitColumn(#\"Filtered Rows\", \"Job Level after FY20 promotions\", Splitter.SplitTextByDelimiter(\" - \", QuoteStyle.Csv), {\"Job Level after FY20 promotions.1\", \"Job Level after FY20 promotions.2\"}),",
+                "    #\"Changed Type1\" = Table.TransformColumnTypes(#\"Split Column by Delimiter\",{{\"Job Level after FY20 promotions.1\", Int64.Type}, {\"Job Level after FY20 promotions.2\", type text}}),",
+                "    #\"Split Column by Delimiter1\" = Table.SplitColumn(#\"Changed Type1\", \"Job Level after FY21 promotions\", Splitter.SplitTextByDelimiter(\" - \", QuoteStyle.Csv), {\"Job Level after FY21 promotions.1\", \"Job Level after FY21 promotions.2\"}),",
+                "    #\"Changed Type2\" = Table.TransformColumnTypes(#\"Split Column by Delimiter1\",{{\"Job Level after FY21 promotions.1\", Int64.Type}, {\"Job Level after FY21 promotions.2\", type text}}),",
+                "    #\"Split Column by Delimiter2\" = Table.SplitColumn(#\"Changed Type2\", \"Department & JL group for PRA\", Splitter.SplitTextByDelimiter(\" - \", QuoteStyle.Csv), {\"Department & JL group for PRA.1\", \"Department & JL group for PRA.2\"}),",
+                "    #\"Changed Type3\" = Table.TransformColumnTypes(#\"Split Column by Delimiter2\",{{\"Department & JL group for PRA.1\", Int64.Type}, {\"Department & JL group for PRA.2\", type text}}),",
+                "    #\"Split Column by Delimiter3\" = Table.SplitColumn(#\"Changed Type3\", \"Job Level group for PRA\", Splitter.SplitTextByDelimiter(\" - \", QuoteStyle.Csv), {\"Job Level group for PRA.1\", \"Job Level group for PRA.2\"}),",
+                "    #\"Changed Type4\" = Table.TransformColumnTypes(#\"Split Column by Delimiter3\",{{\"Job Level group for PRA.1\", Int64.Type}, {\"Job Level group for PRA.2\", type text}}),",
+                "    #\"Split Column by Delimiter4\" = Table.SplitColumn(#\"Changed Type4\", \"Job Level before FY20 promotions\", Splitter.SplitTextByDelimiter(\" - \", QuoteStyle.Csv), {\"Job Level before FY20 promotions.1\", \"Job Level before FY20 promotions.2\"}),",
+                "    #\"Changed Type5\" = Table.TransformColumnTypes(#\"Split Column by Delimiter4\",{{\"Job Level before FY20 promotions.1\", Int64.Type}, {\"Job Level before FY20 promotions.2\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type5\",{\"Job Level after FY20 promotions.1\"}),",
+                "    #\"Renamed Columns\" = Table.RenameColumns(#\"Removed Columns\",{{\"Job Level after FY20 promotions.2\", \"Job Level after FY20 promotions\"}}),",
+                "    #\"Removed Columns1\" = Table.RemoveColumns(#\"Renamed Columns\",{\"Job Level after FY21 promotions.1\"}),",
+                "    #\"Renamed Columns1\" = Table.RenameColumns(#\"Removed Columns1\",{{\"Job Level after FY21 promotions.2\", \"Job Level after FY21 promotions\"}}),",
+                "    #\"Removed Columns2\" = Table.RemoveColumns(#\"Renamed Columns1\",{\"Department & JL group for PRA.1\"}),",
+                "    #\"Renamed Columns2\" = Table.RenameColumns(#\"Removed Columns2\",{{\"Department & JL group for PRA.2\", \"Department & JL group for PRA\"}}),",
+                "    #\"Removed Columns3\" = Table.RemoveColumns(#\"Renamed Columns2\",{\"Job Level group for PRA.1\"}),",
+                "    #\"Renamed Columns3\" = Table.RenameColumns(#\"Removed Columns3\",{{\"Job Level group for PRA.2\", \"Job Level group for PRA\"}}),",
+                "    #\"Removed Columns4\" = Table.RemoveColumns(#\"Renamed Columns3\",{\"Job Level before FY20 promotions.1\"}),",
+                "    #\"Renamed Columns4\" = Table.RenameColumns(#\"Removed Columns4\",{{\"Job Level before FY20 promotions.2\", \"Job Level before FY20 promotions\"}}),",
+                "    #\"Removed Columns5\" = Table.RemoveColumns(#\"Renamed Columns4\",{\"Leaver FY\", \"Rand\"}),",
+                "    #\"Renamed Columns5\" = Table.RenameColumns(#\"Removed Columns5\",{{\"In base group for turnover FY20\", \"Turnover\"}}),",
+                "    #\"Removed Columns6\" = Table.RemoveColumns(#\"Renamed Columns5\",{\"Employee ID\", \"Broad region group: nationality 1\"})",
+                "in",
+                "    #\"Removed Columns6\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "DateTableTemplate_757b6c69-6e6a-4b92-939a-ecec56fc3242",
+        "annotations": [
+          {
+            "name": "__PBI_TemplateDateTable",
+            "value": "true"
+          },
+          {
+            "name": "DefaultItem",
+            "value": "DateHierarchy"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "293bebd4-d835-4894-9341-139d09a1cc05",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "257d89dd-2ed1-4e48-b85e-93d88df78811",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "ac8cd551-63a7-4c50-8677-d3e1120bbff6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "bc79783e-a154-4280-8c4d-b3013f8387de",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "d5b17351-0d80-4742-8d0d-2ff0475369cd",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "7fff57a9-38db-4d7b-8b70-872fe94c501e",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "5ee3c6bd-e6f2-45f6-b019-85354f77a2d6",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "578e3e85-767a-4256-883a-b436ddf0df45",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "bea008b1-1383-4c6f-8e1d-30b0ead3a4f1",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "6fb01e2f-247a-469c-92e1-9e84edb06c3d",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "2e4c0da3-d568-4953-9d5f-619e6e61d0b3",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "dc5c1edd-1b9e-40e8-b9e6-78fbc159899c"
+          }
+        ],
+        "isHidden": true,
+        "isPrivate": true,
+        "lineageTag": "0e649435-d118-4dd8-97d0-4f8d59aac5c7",
+        "partitions": [
+          {
+            "name": "DateTableTemplate_757b6c69-6e6a-4b92-939a-ecec56fc3242",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(2015,1,1), Date(2015,1,1))",
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "LocalDateTable_e62af81a-a85d-45b4-a741-56920dd5430a",
+        "annotations": [
+          {
+            "name": "__PBI_LocalDateTable",
+            "value": "true"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              }
+            ],
+            "dataCategory": "PaddedDateTableDates",
+            "dataType": "dateTime",
+            "isHidden": true,
+            "isNameInferred": true,
+            "lineageTag": "317e6e51-d951-44cc-932d-031ad86717b4",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Year"
+              }
+            ],
+            "dataCategory": "Years",
+            "dataType": "int64",
+            "expression": "YEAR([Date])",
+            "isHidden": true,
+            "lineageTag": "3ce4a20d-54de-4d86-8009-7c335a9c2e30",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "MonthNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "MonthNumber"
+              }
+            ],
+            "dataCategory": "MonthOfYear",
+            "dataType": "int64",
+            "expression": "MONTH([Date])",
+            "isHidden": true,
+            "lineageTag": "f87b9cdd-0483-47c1-b1cf-9cc170c70a26",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Month"
+              }
+            ],
+            "dataCategory": "Months",
+            "dataType": "string",
+            "expression": "FORMAT([Date], \"MMMM\")",
+            "isHidden": true,
+            "lineageTag": "8e07ee28-c1b4-407c-ba7a-2cca17c72d89",
+            "sortByColumn": "MonthNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "QuarterNo",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "QuarterNumber"
+              }
+            ],
+            "dataCategory": "QuarterOfYear",
+            "dataType": "int64",
+            "expression": "INT(([MonthNo] + 2) / 3)",
+            "isHidden": true,
+            "lineageTag": "07d6ea6e-577b-4b4f-b8b9-a9eb6277bdfd",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Quarter"
+              }
+            ],
+            "dataCategory": "Quarters",
+            "dataType": "string",
+            "expression": "\"Qtr \" & [QuarterNo]",
+            "isHidden": true,
+            "lineageTag": "990e6e83-bad5-414a-aae6-45421d96e0cf",
+            "sortByColumn": "QuarterNo",
+            "summarizeBy": "none",
+            "type": "calculated"
+          },
+          {
+            "name": "Day",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "User"
+              },
+              {
+                "name": "TemplateId",
+                "value": "Day"
+              }
+            ],
+            "dataCategory": "DayOfMonth",
+            "dataType": "int64",
+            "expression": "DAY([Date])",
+            "isHidden": true,
+            "lineageTag": "1b1b3655-be26-4a1d-a25c-1d3d60464069",
+            "summarizeBy": "none",
+            "type": "calculated"
+          }
+        ],
+        "hierarchies": [
+          {
+            "name": "Date Hierarchy",
+            "annotations": [
+              {
+                "name": "TemplateId",
+                "value": "DateHierarchy"
+              }
+            ],
+            "levels": [
+              {
+                "name": "Year",
+                "column": "Year",
+                "lineageTag": "44541adc-fe4a-4232-b7c0-fbaa8a388f73",
+                "ordinal": 0
+              },
+              {
+                "name": "Quarter",
+                "column": "Quarter",
+                "lineageTag": "917ccc47-be50-4c6f-ab8c-df2dafd3b482",
+                "ordinal": 1
+              },
+              {
+                "name": "Month",
+                "column": "Month",
+                "lineageTag": "19b34a41-c414-4f83-b6ec-71bdfd56c936",
+                "ordinal": 2
+              },
+              {
+                "name": "Day",
+                "column": "Day",
+                "lineageTag": "2791e6df-2f86-4bf8-aa1e-4457fac56a28",
+                "ordinal": 3
+              }
+            ],
+            "lineageTag": "b8b662ee-ce83-41f3-ae5d-f38601898914"
+          }
+        ],
+        "isHidden": true,
+        "lineageTag": "fc68acfb-a06a-4037-b0f9-b8f7f03ccab1",
+        "partitions": [
+          {
+            "name": "LocalDateTable_e62af81a-a85d-45b4-a741-56920dd5430a",
+            "mode": "import",
+            "source": {
+              "expression": "Calendar(Date(Year(MIN('Pharma Group AG'[Last hire date])), 1, 1), Date(Year(MAX('Pharma Group AG'[Last hire date])), 12, 31))",
+              "type": "calculated"
+            }
+          }
+        ],
+        "showAsVariationsOnly": true
+      },
+      {
+        "name": "0-measure",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          }
+        ],
+        "lineageTag": "fadfd08d-bbcc-4286-8293-f9d75315020c",
+        "measures": [
+          {
+            "name": "total_Employee",
+            "expression": "COUNTROWS('Pharma Group AG')",
+            "formatString": "0",
+            "lineageTag": "e79ab2b1-7748-4149-b9a6-a06b5ab76eb7"
+          },
+          {
+            "name": "Male",
+            "expression": "CALCULATE([total_Employee],'Pharma Group AG'[Gender] = \"Male\")",
+            "formatString": "0",
+            "lineageTag": "55fecce8-e537-4024-979b-cc880920bb0e"
+          },
+          {
+            "name": "Female",
+            "expression": "CALCULATE([total_Employee],'Pharma Group AG'[Gender] = \"Female\")",
+            "formatString": "0",
+            "lineageTag": "9132c8d5-f9af-4381-8203-2b32e0856344"
+          },
+          {
+            "name": "Employee Promoted",
+            "expression": "(CALCULATE([total_Employee],'Pharma Group AG'[Promotion in FY21?]=\"Yes\")/[total_Employee])",
+            "formatString": "0.00\\ %;-0.00\\ %;0.00\\ %",
+            "lineageTag": "98dd2e87-e085-4492-a401-2cdd14159d62"
+          },
+          {
+            "name": "Leavers",
+            "expression": "CALCULATE([total_Employee],'Pharma Group AG'[FY20 leaver?]= \"Yes\")",
+            "formatString": "0",
+            "lineageTag": "5531a0d2-f3c4-4ca2-aaf4-680a85caca59"
+          },
+          {
+            "name": "Male Hired",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "CALCULATE([total_Employee],'Pharma Group AG'[New hire FY20?]= \"Y\",'Pharma Group AG'[Gender]= \"Male\")",
+            "lineageTag": "c3e1fea2-30e7-47b9-be0e-ff650b1e10b4"
+          },
+          {
+            "name": "Female Hired",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "CALCULATE([total_Employee],'Pharma Group AG'[New hire FY20?]= \"Y\",'Pharma Group AG'[Gender]= \"Female\")",
+            "lineageTag": "9d7dcbfe-4e35-44cf-b7de-3a71c493c815"
+          },
+          {
+            "name": "Rating",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "AVERAGE('Pharma Group AG'[FY20 Performance Rating])",
+            "lineageTag": "a4aee503-3f41-4bda-a307-78739076be59"
+          },
+          {
+            "name": "Male Rating",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "CALCULATE([Rating],'Pharma Group AG'[Gender]= \"Male\")",
+            "lineageTag": "421cb665-6e57-4b5e-b9bd-423380bb8ac2"
+          },
+          {
+            "name": "Female Rating",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "CALCULATE([Rating],'Pharma Group AG'[Gender]= \"Female\")",
+            "lineageTag": "4f697cf9-742e-42b5-a8e1-9db8476ecb7f"
+          },
+          {
+            "name": "Turnover",
+            "expression": "CALCULATE([total_Employee],'Pharma Group AG'[Turnover]=\"Y\")/[total_Employee]",
+            "formatString": "0.00\\ %;-0.00\\ %;0.00\\ %",
+            "lineageTag": "9c09d9bb-1600-41c5-bbd3-3fb3ff3d7bf0"
+          },
+          {
+            "name": "Male Promoted",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "CALCULATE([total_Employee],'Pharma Group AG'[Promotion in FY21?] = \"Yes\",'Pharma Group AG'[Gender]= \"Male\")/[total_Employee]",
+            "lineageTag": "4bda444d-cf19-46ac-b56f-d0e09fd3cf30"
+          },
+          {
+            "name": "Female Promoted",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "CALCULATE([total_Employee],'Pharma Group AG'[Promotion in FY21?]= \"Yes\",'Pharma Group AG'[Gender]= \"Female\")/[total_Employee]",
+            "lineageTag": "1976b30f-20e3-409b-a8d3-ec7b4841aa64"
+          },
+          {
+            "name": "Hired",
+            "expression": "CALCULATE([total_Employee],'Pharma Group AG'[New hire FY20?]= \"Y\")",
+            "formatString": "0",
+            "lineageTag": "a4450f64-eb45-45cc-9f2b-95be5a6a2bec"
+          },
+          {
+            "name": "Not Promoted",
+            "annotations": [
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isGeneralNumber\":true}"
+              }
+            ],
+            "expression": "1 - [Male Promoted]-[Female Promoted]",
+            "lineageTag": "ad42f7ad-4c0b-4c96-8b47-de50c021b1c6"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "0-measure",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}}),",
+                "    #\"Removed Columns\" = Table.RemoveColumns(#\"Changed Type\",{\"Column1\"})",
+                "in",
+                "    #\"Removed Columns\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
