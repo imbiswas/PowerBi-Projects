@@ -1,0 +1,205 @@
+table 0Measures
+	lineageTag: ec08ef19-8c54-4e6b-a0f2-9c05a70fd258
+
+	measure 'Invoiced YTD' =
+			IF(
+			    ISBLANK(
+			        CALCULATE(
+			            SUM(Sales[Net Price]),
+			            DATESYTD('Date'[Date])
+			        )
+			    ),
+			    0,
+			CALCULATE(
+			    SUM(Sales[Net Price]),
+			    DATESYTD('Date'[Date])
+			)
+			)
+		lineageTag: 9e1d404c-ce5e-490e-9ea0-5ffc63faa220
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Invoiced Previous YTD' = ```
+			
+			CALCULATE(
+			    SUM(Sales[Net Price]),
+			    DATESYTD(SAMEPERIODLASTYEAR('Date'[Date]))
+			)
+			
+			```
+		lineageTag: 10f5bad0-fe4a-4e33-a0dc-e175b9392abf
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Sales Growth YTD' = ```
+			
+			IF(
+			    [Invoiced Previous YTD] = 0, 
+			    0,  -- To avoid division by zero, return 0 if LYTD is 0
+			    DIVIDE(
+			        [Invoiced YTD] - [Invoiced Previous YTD],
+			        [Invoiced Previous YTD],
+			        0
+			    )   -- Multiply by 100 to get percentage
+			)
+			
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: 4c7edafd-ab7b-4730-b2fb-3cab4c8de13a
+
+	measure InvoicedPreviousYear = CALCULATE([Invoiced YTD], SAMEPERIODLASTYEAR('Date'[Date]))
+		lineageTag: ce254a8f-e824-49d4-85ad-24b0c66a83a2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure OrderedAmount =
+			
+			VAR _startOfYear = DATE(YEAR(MAX('Date'[Date])), 1, 1) // Start of the year for the selected date
+			VAR _selectedDate = MAX('Date'[Date]) // Selected date from the slicer
+			RETURN
+			    CALCULATE(
+			        SUMX(
+			            Sales,
+			            Sales[Quantity] * Sales[Unit Price]
+			        ),
+			        Sales[Order Date] >= _startOfYear && Sales[Order Date] <= _selectedDate,
+			        USERELATIONSHIP(Sales[Order Date], 'Date'[Date]) // Enforce relationship with Order
+			    )
+		lineageTag: 360a4473-9fad-4fce-bf06-5f7246e1798a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure NewCustomers = ```
+			
+			VAR _startOfYear = DATE(YEAR(MAX('Date'[Date])), 1, 1) // Start of the year for the selected date
+			VAR _selectedDate = MAX('Date'[Date]) // Selected date from the slicer
+			RETURN
+			    COALESCE(
+			        COUNTROWS(
+			            FILTER(
+			                Customer,
+			                Customer[FirstPurchaseDate] >= _startOfYear &&
+			                Customer[FirstPurchaseDate] <= _selectedDate
+			            )
+			        ),
+			        0
+			    )
+			
+			```
+		formatString: 0
+		lineageTag: da37d68c-7c40-4f82-87fc-a6346872a465
+
+	measure InvoicedAmount = ```
+			
+			VAR _startOfYear = DATE(YEAR(MAX('Date'[Date])), 1, 1) // Start of the year for the selected date
+			VAR _selectedDate = MAX('Date'[Date]) // Selected date from the slicer
+			RETURN
+			    COALESCE(
+			        CALCULATE(
+			            SUM(Sales[Net Price]),
+			            FILTER(
+			                Sales,
+			                Sales[Invoice Date] >= _startOfYear &&
+			                Sales[Invoice Date] <= _selectedDate
+			            )
+			        ),
+			        0
+			    )
+			
+			```
+		lineageTag: 868c59e1-f68b-4d63-8177-95c3ab7e91ff
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Highest Order' = ```
+			
+			    
+			VAR _startOfYear = DATE(YEAR(MAX('Date'[Date])), 1, 1)
+			VAR _selectedDate = MAX('Date'[Date])
+			RETURN
+			    CALCULATE(
+			        MAX(Sales[Net Price]),
+			        FILTER(
+			            Sales,
+			            Sales[Order Date] >= _startOfYear &&
+			            Sales[Order Date] <= _selectedDate
+			        )
+			    )
+			
+			```
+		lineageTag: 350aebe9-471c-40ab-a278-f8f92b29c70c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unified Customer Name' = ```
+			
+			IF(
+			    SELECTEDVALUE(Customer[Customer Type]) = "Person",
+			    SELECTEDVALUE(Customer[Name]),
+			    SELECTEDVALUE(Customer[CompanyName])
+			)
+			
+			```
+		lineageTag: 7c232809-092f-455c-b6b7-139b83017942
+
+	measure 'Previous Year Monthly Invoiced Amount' = ```
+			
+			CALCULATE(
+			    SUM(Sales[Net Price]),
+			    SAMEPERIODLASTYEAR('Date'[Date])
+			)
+			
+			```
+		lineageTag: 509012aa-a7a0-4575-ab90-4b296d5c7465
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure rows = COUNTROWS(Sales)
+		formatString: 0
+		lineageTag: f7a31fce-d12b-40e7-89a3-06458bb58af1
+
+	measure 'Profit Margin %' = ```
+			
+			Var Profit = SUMX(Sales,
+			    ('Sales'[Net Price]) -('Sales'[Unit Cost] * 'Sales'[Quantity])
+			    )
+			RETURN
+			DIVIDE( Profit, SUM('Sales'[Net Price]), 0 ) 
+			```
+		formatString: 0.00\ %;-0.00\ %;0.00\ %
+		lineageTag: d716c90d-874c-4893-9ed0-c8f6640824e8
+
+	measure 'Highest Order by SUM' = ```
+			
+			    
+			VAR _startOfYear = DATE(YEAR(MAX('Date'[Date])), 1, 1)
+			VAR _selectedDate = MAX('Date'[Date])
+			RETURN
+			    CALCULATE(
+			        SUM(Sales[Net Price]),
+			        FILTER(
+			            Sales,
+			            Sales[Order Date] >= _startOfYear &&
+			            Sales[Order Date] <= _selectedDate
+			        )
+			    )
+			```
+		lineageTag: e0f53e4f-fe69-433b-85b6-0a1ce7afa568
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: b528278e-728b-42e9-a30c-d9c559db6919
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 0Measures = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = f2e1475d2c084b83afaa1ed57c434f9a
+

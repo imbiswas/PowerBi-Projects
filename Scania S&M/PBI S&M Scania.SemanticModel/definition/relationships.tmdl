@@ -1,0 +1,17 @@
+relationship 0716dedd-7b17-b751-67c2-8d5ad194fdb9
+	fromColumn: Sales.ProductKey
+	toColumn: Product.ProductKey
+
+relationship f51d32c7-ba6b-627f-9d74-f08684ecd588
+	fromColumn: Sales.CustomerKey
+	toColumn: Customer.CustomerKey
+
+relationship 30bad805-dd59-dcd4-f5f5-8d0200138b0c
+	isActive: false
+	fromColumn: Sales.'Order Date'
+	toColumn: Date.Date
+
+relationship 74673351-3282-8f3b-ffc1-744798cd85bf
+	fromColumn: Sales.'Invoice Date'
+	toColumn: Date.Date
+

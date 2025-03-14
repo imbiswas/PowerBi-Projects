@@ -1,0 +1,185 @@
+table Customer
+	lineageTag: ebd0b73b-25bc-47ef-8f3d-42029954bae3
+
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 6da12662-0bf8-48d2-b031-9f50504f3bd1
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: b4280e97-60cc-4899-853e-68f5d5ff5696
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Birth Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 8ee98033-7988-49ec-91d2-e53660e0d4b3
+		summarizeBy: none
+		sourceColumn: Birth Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Marital Status'
+		dataType: string
+		lineageTag: 8d2440cf-bb67-4b96-afcc-eba124701744
+		summarizeBy: none
+		sourceColumn: Marital Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column Gender
+		dataType: string
+		lineageTag: c4e0fb27-d03e-4c96-bcf0-571a5b5e0074
+		summarizeBy: none
+		sourceColumn: Gender
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Yearly Income'
+		dataType: double
+		lineageTag: b47d3d13-6a68-4cd9-b14b-4b2b63fa2eda
+		summarizeBy: none
+		sourceColumn: Yearly Income
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Children'
+		dataType: int64
+		formatString: 0
+		lineageTag: 0c20a356-970a-414b-891f-47949d4fc1eb
+		summarizeBy: none
+		sourceColumn: Total Children
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Children At Home'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7ee7a06c-e775-410c-8c23-5149c813de7d
+		summarizeBy: none
+		sourceColumn: Children At Home
+
+		annotation SummarizationSetBy = Automatic
+
+	column Education
+		dataType: string
+		lineageTag: bee154c3-d5db-49d3-b87f-96d08c0c5462
+		summarizeBy: none
+		sourceColumn: Education
+
+		annotation SummarizationSetBy = Automatic
+
+	column Occupation
+		dataType: string
+		lineageTag: ce2d4b1c-abdb-4e0e-acbd-831dfacfb703
+		summarizeBy: none
+		sourceColumn: Occupation
+
+		annotation SummarizationSetBy = Automatic
+
+	column Continent
+		dataType: string
+		lineageTag: 7aa23fb0-069a-4eb2-829f-fe5502c44c82
+		summarizeBy: none
+		sourceColumn: Continent
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: cda7f428-3343-4d90-948b-23807a1f0ad5
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column State
+		dataType: string
+		lineageTag: e0ff1e4c-8357-4d6b-a8c1-bcc3aab5a4c7
+		summarizeBy: none
+		sourceColumn: State
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Address Line 1'
+		dataType: string
+		lineageTag: 3c663cc0-a84a-401d-b432-00b4928d58b5
+		summarizeBy: none
+		sourceColumn: Address Line 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer Type'
+		dataType: string
+		lineageTag: ae36ae8f-618f-4d22-aeac-90cc856f0c42
+		summarizeBy: none
+		sourceColumn: Customer Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column CountryRegion
+		dataType: string
+		lineageTag: dc5ee03c-6770-4784-9485-310669415bb9
+		summarizeBy: none
+		sourceColumn: CountryRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column CompanyName
+		dataType: string
+		lineageTag: 8e01c63f-f0c6-4672-ae5a-557af3b7b132
+		summarizeBy: none
+		sourceColumn: CompanyName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesRegion = ```
+			
+			SWITCH(TRUE(),
+			   Customer[CountryRegion] IN {"United States", "Canada"}, "North America",
+			   Customer[CountryRegion] IN {"France", "Germany", "Italy", "Ireland", "Portugal", "Spain", "Switzerland", "Netherlands", "United Kingdom"}, "West Europe",
+			   "All Others"
+			)
+			
+			```
+		lineageTag: d58a6778-4874-4dd1-9a73-2480c05aa512
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column FirstPurchaseDate = ```
+			
+			CALCULATE(
+			    MIN(Sales[Order Date]),
+			    FILTER(Sales, Sales[CustomerKey] = Customer[CustomerKey])
+			)
+			
+			```
+		formatString: General Date
+		lineageTag: 99b75c10-9d2d-484a-b573-0bf9de785854
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Customer-c284f368-45b7-4be8-a2e9-c37f8646e040 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("sesoco3272"),
+				    demo = Source{[Name="demo"]}[Data],
+				    dbo_Customer = demo{[Schema="dbo",Item="Customer"]}[Data]
+				in
+				    dbo_Customer
+
+	annotation PBI_ResultType = Table
+

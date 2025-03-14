@@ -1,0 +1,7 @@
+role 'North America'
+	modelPermission: read
+
+	tablePermission Customer = [SalesRegion] == "North America"
+
+	annotation PBI_Id = f4ec2ffa153c4be0baa36f300f790cba
+

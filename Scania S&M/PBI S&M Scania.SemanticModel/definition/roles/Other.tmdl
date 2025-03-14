@@ -1,0 +1,7 @@
+role Other
+	modelPermission: read
+
+	tablePermission Customer = [SalesRegion] == "All Others"
+
+	annotation PBI_Id = 3fbbd0eb840e4d119da06c5b16b895d8
+

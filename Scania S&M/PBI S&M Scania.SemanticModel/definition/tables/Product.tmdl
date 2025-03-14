@@ -1,0 +1,119 @@
+table Product
+	lineageTag: 6301ab76-44fb-4b99-a1d8-ebfe49661325
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d91ae7dd-eff1-4e17-be8b-43d2e7008cba
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Code'
+		dataType: string
+		lineageTag: 7cd218d5-e3cd-4780-9565-778b6c67fff0
+		summarizeBy: none
+		sourceColumn: Product Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Product Name'
+		dataType: string
+		lineageTag: 2ae818b9-d149-4da9-b7bd-188d5e644239
+		summarizeBy: none
+		sourceColumn: Product Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Manufacturer
+		dataType: string
+		lineageTag: c744d357-a7a5-4823-95c0-786d1fbcc097
+		summarizeBy: none
+		sourceColumn: Manufacturer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: 1cab5e59-d9d2-4fbf-acc9-e8e30139939e
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: string
+		lineageTag: 634f4815-224b-4f72-8f9c-34d6234f35d1
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: double
+		lineageTag: 0857cc9d-bd82-48dc-91f6-3c6187658e1a
+		summarizeBy: none
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unit Cost'
+		dataType: double
+		lineageTag: cf686f44-b5e8-4851-8c6d-d26bdf3a9eea
+		summarizeBy: none
+		sourceColumn: Unit Cost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Unit Price'
+		dataType: double
+		lineageTag: 778e331e-90d7-44be-bd76-62fc170f3441
+		summarizeBy: none
+		sourceColumn: Unit Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Available Date'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: e23a5cf4-16d9-4bb7-a32b-f0a2ee81fc2c
+		summarizeBy: none
+		sourceColumn: Available Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subcategory
+		dataType: string
+		lineageTag: 545f9a09-a9e5-46e6-9271-3ff861ce1508
+		summarizeBy: none
+		sourceColumn: Subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: b2f75f03-eca6-4095-9c11-f78facac482c
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Product-e19b0a83-0332-4650-bcaf-0c9ff35f2a31 = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Databases("sesoco3272"),
+				    demo = Source{[Name="demo"]}[Data],
+				    dbo_Product = demo{[Schema="dbo",Item="Product"]}[Data]
+				in
+				    dbo_Product
+
+	annotation PBI_ResultType = Table
+
